@@ -17,7 +17,7 @@ include("session.php");
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Delete Theme </title>
 </head>
