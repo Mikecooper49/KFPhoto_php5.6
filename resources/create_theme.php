@@ -30,7 +30,7 @@ include("session.php");
 
 if (!isset($_POST['theme_name'])
 ) {
-    echo "<p>You have not entered a theme name<br/>
+    echo "<p>You have not entered a theme name<br>
              Please go back and try again.</p>";
     exit;
 }

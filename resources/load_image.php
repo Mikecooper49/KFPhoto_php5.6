@@ -30,7 +30,7 @@ include("session.php");
 
 if (!isset($_POST['fileToUpload']) || !isset($_POST['image_name'])
     || !isset($_POST['theme_id'])) {
-    echo "<p>You have not entered all the required details.<br />
+    echo "<p>You have not entered all the required details.<br>
              Please go back and try again.</p>";
     exit;
 }
@@ -91,7 +91,7 @@ $stmt->execute();
 
 if ($stmt->affected_rows > 0) {
 
-    echo "Image  " . $image_name . " loaded successfully </br>";
+    echo "Image  " . $image_name . " loaded successfully <br>";
 
 
 } else {

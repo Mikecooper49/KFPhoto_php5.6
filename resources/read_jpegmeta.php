@@ -21,7 +21,7 @@ read_jpegmeta.php -  simple utility to read ALL metadata from a jpg
 
 <?php
 
-echo "<a href=../admin.php> Back to Admin Page<br/><br/></a>";
+echo "<a href=../admin.php> Back to Admin Page<br><br></a>";
 
 // create variables for matadata read
 
@@ -30,7 +30,7 @@ $image_pointer = "../images/" . $fileToUpload;
 
 
 $exif = exif_read_data("$image_pointer", 'IFD0');
-echo $exif === false ? "Sorry no metadata found.<br />\n" : "Image contains this metadata<br/><br/>\n";
+echo $exif === false ? "Sorry no metadata found.<br>\n" : "Image contains this metadata<br><br>\n";
 
 $exif = exif_read_data("$image_pointer", 0, true);
 

@@ -29,7 +29,7 @@ include("session.php");
 // check that all entries are filled out
 
 if (!isset($_POST['theme_name'])) {
-    echo "<p>You have not entered a valid theme name.<br />
+    echo "<p>You have not entered a valid theme name.<br>
              Please go back and try again.</p>";
     exit;
 }
@@ -57,7 +57,7 @@ mysqli_close($db);
 
 // back to admin.php
 
-echo "<a href=../admin.php> Back to Admin Page<br/><br/></a>";
+echo "<a href=../admin.php> Back to Admin Page<br><br></a>";
 
 ?>
 

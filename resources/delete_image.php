@@ -28,7 +28,7 @@ include("session.php");
 // check that all entries are filled out
 
 if (!isset($_POST['image_name'])) {
-    echo "<p>You have not entered am image name.<br />
+    echo "<p>You have not entered am image name.<br/>
              Please go back and try again.</p>";
     exit;
 }
@@ -45,12 +45,12 @@ if ($db === false) {
 
 $sql = (" DELETE from image WHERE image_name = ('" . $image_name . "')");
 if (mysqli_query($db, $sql)) {
-    echo "Image  " . $image_name . " deleted successfully.<br/>";
+    echo "Image  " . $image_name . " deleted successfully.<br>";
 } else {
     echo "ERROR: Could not delete image, please try again $sql. " . mysqli_error($db);
 }
 
-echo "<a href=../admin.php> Back to Admin Page<br/><br/></a>";
+echo "<a href=../admin.php> Back to Admin Page<br><br></a>";
 
 // Close connection
 
