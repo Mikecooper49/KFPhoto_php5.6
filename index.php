@@ -11,8 +11,8 @@ index.php - login page
 -->
 <?php
 
-include("resources/config.php");
-include("resources/session.php");
+include_once("resources/config.php");
+include_once("resources/session.php");
 
 ?>
 

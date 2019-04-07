@@ -11,8 +11,8 @@ homepage.php - page after login where different hyperlinked themes are displayed
 -->
 
 <?php
-include("resources/config.php");
-include("resources/session.php");
+include_once("resources/config.php");
+include_once("resources/session.php");
 
 ?>
 

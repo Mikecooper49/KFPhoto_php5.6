@@ -46,7 +46,7 @@ if ($db === false) {
 
 $sql = (" DELETE FROM  theme WHERE theme_name = ('" . $theme_name . "')");
 if (mysqli_query($db, $sql)) {
-    echo "Theme  " . $theme_name . " deleted successfully.";
+    echo "Theme  " . $theme_name . " deleted successfully.<br><br>";
 } else {
     echo "ERROR: Could not delete image, please try again $sql. " . mysqli_error($db);
 }

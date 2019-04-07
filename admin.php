@@ -11,8 +11,8 @@ admin.php - page where images and themes are managed (only available to Admin us
 -->
 
 <?php
-include("resources/config.php");
-include("resources/session.php");
+include_once("resources/config.php");
+include_once("resources/session.php");
 
 ?>
 
