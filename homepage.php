@@ -31,6 +31,8 @@ include("resources/session.php");
 
 
 
+<!-- set navbar -->
+
 <?php
 
 $customer_type = $_SESSION['customer_type'];

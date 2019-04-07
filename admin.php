@@ -30,6 +30,9 @@ include("resources/session.php");
 </div>
 
 <?php
+
+/* set admin navbar */
+
 include("resources/navbars/adminnav.html");
 ?>
 
@@ -39,6 +42,7 @@ include("resources/navbars/adminnav.html");
 <div class="admin" style="width:60%">
 
     <!-- load image form -->
+
     <h2>Load New Image to a Theme</h2>
     <form action="resources/load_image.php" method="post">
         <label for="">Image: </label>
@@ -47,7 +51,7 @@ include("resources/navbars/adminnav.html");
         <input type="text" id ="fileToUpLoad" name="image_name"/>
         <div id ="theme_select">
         <label for="theme_id">Select a theme: </label>
-       <!-- <input name="theme_name" type ="text"/> -->
+
         <select name="theme_id" size="5">
             <option value="9">Aberdeen</option>
             <option value="2">Copenhagen</option>
@@ -62,6 +66,7 @@ include("resources/navbars/adminnav.html");
 </div>
 
 <!-- delete image form -->
+
 <div class="form-inline">
     <div class="admin" style="float:left; width:20%">
 
@@ -78,6 +83,7 @@ include("resources/navbars/adminnav.html");
     <div class="admin" style=" float:left; width:20%">
 
         <!-- delete theme form -->
+
         <h2>Delete Theme</h2>
         <br>
         <form action="resources/delete_theme.php" method="post"
@@ -106,6 +112,7 @@ include("resources/navbars/adminnav.html");
     <br/><br/>
 
     <!-- read jpg metadata utility -->
+
     <div class="admin" style= " float:left; width:41.5%">
     <h2>Read jpg metadata (in images dir)</h2>
     <br>

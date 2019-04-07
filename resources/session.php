@@ -6,7 +6,7 @@ Date: March/April 2019
 
 This app uses the kfphoto sql database
 
-session.php (validates username and password sets session variables)
+session.php (validates username and password, sets session variables and customer cookies)
 
 -->
 

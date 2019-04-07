@@ -13,7 +13,6 @@ contact.php - shows contact information
 <?php
 include("resources/config.php");
 include("resources/session.php");
-session_start();
 ?>
 
 

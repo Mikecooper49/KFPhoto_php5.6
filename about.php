@@ -13,7 +13,7 @@ about.php - shows text about photographer
 <?php
 include("resources/config.php");
 include("resources/session.php");
-session_start();
+
 ?>
 
 
@@ -32,7 +32,7 @@ session_start();
 
 <?php
 
-/* check customer type from login */
+/* check customer type from login and set navbar */
 
 $customer_type = $_SESSION['customer_type'];
 
@@ -47,7 +47,7 @@ if ($customer_type == 'Admin') {
 
 <div class="text-container" align="center">
 
-    <h2> About Kevin Flanagan</h2>
+    <h2>About Kevin Flanagan</h2>
 
     </div>
 

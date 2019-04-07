@@ -37,15 +37,15 @@ include("resources/session.php");
 
             <div class="loginbox" align="right">
                 <form action="" method="post">
-                    <label> Email : </label><input type="text" name="username" value="<?php if(isset($_COOKIE['username'])) { echo $_COOKIE['username']; } ?>" class="box"/><br/><br/>
-                    <label> Password : </label><input type="password" name="password" value="<?php if(isset($_COOKIE['password'])) { echo $_COOKIE['password']; } ?>" class="box"/><br/><br/>
-                    Remember Me: <input type="checkbox" name="rememberme" class="box"/><br><br/>
+                    <label> Email : </label><input type="text" name="username" value="<?php if(isset($_COOKIE['username'])) { echo $_COOKIE['username']; } ?>" class="box"><br><br>
+                    <label> Password : </label><input type="password" name="password" value="<?php if(isset($_COOKIE['password'])) { echo $_COOKIE['password']; } ?>" class="box"><br><br>
+                    Remember Me: <input type="checkbox" name="rememberme" class="box"><br><br>
                     <input type="submit" value="Log On">
                 </form>
             </div>
 
             <?php if(isset($error)) {
-            echo "<p>Sorry, you're login hasn't worked.<br />
+            echo "<p>Sorry, you're login hasn't worked.<br>
              Please try again.</p>";}?>
         </div>
     </div>

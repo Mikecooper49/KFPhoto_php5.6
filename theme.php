@@ -30,6 +30,7 @@ include("resources/session.php");
     <img src="resources/images/LogoWhite.jpg" alt="kfphotography logo" width="400px" height="200px">
 </div>
 
+<!-- set navbar -->
 
 <?php
 $customer_type = $_SESSION['customer_type'];
@@ -48,9 +49,11 @@ if ($customer_type == 'Admin') {
 <?php
 
 //GET theme_id from homepage selection
+
 $theme_id = $_GET['theme_id'];
 
 // read database
+
 $sqltheme = "SELECT *  FROM image WHERE theme_id='$theme_id'";
 
 $result = mysqli_query($db, $sqltheme);
@@ -75,13 +78,13 @@ if (mysqli_num_rows($result) > 0) {
         ; ?>
         <br><br>
         <div class="picture" align="center">
-            <img src="<?php echo trim($row['image_pointer'], "../"); ?> " alt="<?php echo $row['image_name']; ?>"
+            <img src="<?php echo ltrim($row['image_pointer'], "./"); ?> " alt="<?php echo $row['image_name']; ?>"
                  style="width:80%; height:80%">
 
 
             <!-- read metadata directly from jpg -->
 
-            <?php $exif = exif_read_data(trim($row['image_pointer'], "../"), 0, true);
+            <?php $exif = exif_read_data(ltrim($row['image_pointer'], "./"), 0, true);
 
             foreach ($exif as $key => $section) {
                 foreach ($section as $name => $val) {
@@ -108,7 +111,7 @@ if (mysqli_num_rows($result) > 0) {
             }
             ?>
 
-            <!-- print image name and metadata from jpg in dir /images  -->
+            <!-- print image name and metadata from jpg in dir /images underneath image  -->
 
             <h2><?php echo $row['image_name'] . " " . $Copyright; ?></h2>
             <h3><?php echo "(Camera:  " . $Model . "  F-Number:  " . $FNumber . " ISO:   " . $ISO . "   Lens:  " . $Lens . ")"; ?></h3>
@@ -116,7 +119,7 @@ if (mysqli_num_rows($result) > 0) {
         <?php
     }
 } else {
-    echo "no images";
+    echo "no images in this theme";
 }
 
 // close result and sql query
