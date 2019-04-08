@@ -78,7 +78,7 @@ ul#horizontal {
 
 ul#horizontal li {
     display: inline;
-    font-size: 40px;
+    font-size: 30px;
     padding: 10px;
     border-bottom: 2px solid black;
 }
