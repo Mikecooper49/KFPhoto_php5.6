@@ -11,8 +11,9 @@ delete_image.php -  displays form to delete an image from the database but leave
 -->
 
 <?php
+//session_start();
 include("config.php");
-include("session.php");
+//include("session.php");
 ?>
 
 <!DOCTYPE html>

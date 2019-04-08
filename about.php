@@ -11,11 +11,11 @@ about.php - shows text about photographer
 -->
 
 <?php
+session_start();
 include_once("resources/config.php");
-include_once("resources/session.php");
+// include_once("resources/session.php");
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

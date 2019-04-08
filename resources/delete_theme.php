@@ -13,7 +13,7 @@ be deleted from database but left in images directory
 
 <?php
 include("config.php");
-include("session.php");
+// include("session.php");
 ?>
 
 <!DOCTYPE html>

@@ -12,8 +12,9 @@ loads data to kfphoto database
 -->
 
 <?php
+session_start();
 include("config.php");
-include("session.php");
+//include("session.php");
 ?>
 
 <!DOCTYPE html>
@@ -44,8 +45,8 @@ $theme_id = intval($_POST['theme_id']);
 $image_pointer = "../images/" . $fileToUpload;
 $width = 0;
 $height = 0;
-$phpdate = strtotime($date_taken);
-$date_taken = date('Y-m-d H:i:s', $phpdate);
+// $p_date = strtotime($date_taken);
+$date_taken = date('Y-m-d H:i:s');
 
 
 //read metadata from jpg
@@ -68,7 +69,7 @@ foreach ($exif as $key => $section) {
             $width = intval($val);
         }
         if ($name == "DateTimeOriginal") {
-            $date_taken = $val;
+            $date_taken = strval($val);
         }
 
     }

@@ -11,8 +11,9 @@ contact.php - shows contact information
 -->
 
 <?php
+session_start();
 include_once("resources/config.php");
-include_once("resources/session.php");
+//include_once("resources/session.php");
 ?>
 
 

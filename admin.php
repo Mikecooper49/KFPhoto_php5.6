@@ -11,9 +11,9 @@ admin.php - page where images and themes are managed (only available to Admin us
 -->
 
 <?php
-include_once("resources/config.php");
-include_once("resources/session.php");
 
+session_start();
+include_once("resources/config.php");
 ?>
 
 <!DOCTYPE html>
@@ -126,11 +126,7 @@ include("resources/navbars/adminnav.html");
 
 <!-- include footer.php -->
 
-<footer id="footer">
-    <?php
-    require("resources/footer.php");
-    ?>
-</footer>
+
 
 </body>
 </html>

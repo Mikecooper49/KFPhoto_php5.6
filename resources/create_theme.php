@@ -12,8 +12,9 @@ create_theme.php - displays form to create a new theme
 
 
 <?php
+//session_start();
 include("config.php");
-include("session.php");
+//include("session.php");
 ?>
 
 <!DOCTYPE html>

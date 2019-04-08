@@ -10,17 +10,8 @@ config.php (opens kfphoto database on home computer, if this fails it opens db_1
 
 <?php
 
-// home environment connection
+// RGU environment connection
 
-define('DB_SERVER_HOME', 'localhost');
-define('DB_USERNAME_HOME', 'root');
-define('DB_PASSWORD_HOME', 'root');
-define('DB_DATABASE_HOME', 'kfphoto');
-$db = mysqli_connect(DB_SERVER_HOME, DB_USERNAME_HOME, DB_PASSWORD_HOME, DB_DATABASE_HOME);
-
-// if not connected at home try RGU connection
-
-if (!$db) {
 
     define('DB_SERVER_RGU', 'CSDM-WEBDEV');
     define('DB_USERNAME_RGU', '1808760');
@@ -28,6 +19,5 @@ if (!$db) {
     define('DB_DATABASE_RGU', 'db1808760_kfphoto');
     $db = mysqli_connect(DB_SERVER_RGU, DB_USERNAME_RGU, DB_PASSWORD_RGU, DB_DATABASE_RGU);
 
-}
 
 ?>

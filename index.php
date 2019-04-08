@@ -12,7 +12,7 @@ index.php - login page
 <?php
 
 include_once("resources/config.php");
-include_once("resources/session.php");
+//include_once("resources/session.php");
 
 ?>
 
@@ -36,7 +36,7 @@ include_once("resources/session.php");
         <div style="margin:20px 20px">
 
             <div class="loginbox" align="right">
-                <form action="" method="post">
+                <form action="resources/session.php" method="post">
                     <label> Email : </label><input type="text" name="username" value="<?php if(isset($_COOKIE['username'])) { echo $_COOKIE['username']; } ?>" class="box"><br><br>
                     <label> Password : </label><input type="password" name="password" value="<?php if(isset($_COOKIE['password'])) { echo $_COOKIE['password']; } ?>" class="box"><br><br>
                     Remember Me: <input type="checkbox" name="rememberme" class="box"><br><br>

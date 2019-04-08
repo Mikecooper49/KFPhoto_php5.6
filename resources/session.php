@@ -13,14 +13,19 @@ session.php (validates username and password, sets session variables and custome
 <?php
 
 session_start();
+include_once('config.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // username, password sent from login form on index.php
+    echo "Hello";
 
-    $myusername = mysqli_real_escape_string($db, $_POST['username']);
-    $mypassword = mysqli_real_escape_string($db, $_POST['password']);
-
+if (!empty($_POST['username']))
+{
+        echo "NULL";
+        $myusername = $_POST['username'];
+        $mypassword = $_POST['password'];
+    }
 
 // check whether cookies are set from login page
 
@@ -37,7 +42,7 @@ if(!empty($_POST["rememberme"])) {
 
     // get data from customers table in kfphoto database
 
-    $sql = "SELECT *  FROM customers WHERE name = '$myusername' AND password = '$mypassword'";
+    $sql = "SELECT *  FROM customers WHERE name = '$myusername' AND password = '$mypassword' ";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     $active = $row['active'];
@@ -50,7 +55,8 @@ if(!empty($_POST["rememberme"])) {
     if ($count == 1) {
         $_SESSION['username'] = $myusername;
         $_SESSION['customer_type'] = $customer_type;
-        header("location:homepage.php");
+        $_SESSION['password'] = $mypassword;
+        header("location:../homepage.php");
     } else {
         $error = "Your Login Name or Password is invalid please try again";
     }

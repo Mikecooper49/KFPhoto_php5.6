@@ -13,8 +13,10 @@ each image with along image title.
 -->
 
 <?php
+
+session_start();
 include_once("resources/config.php");
-include_once("resources/session.php");
+//include_once("resources/session.php");
 ?>
 
 <!DOCTYPE html>
